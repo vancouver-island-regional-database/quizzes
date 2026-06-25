@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ladysmith Bylaws: Keep or Scrap? 🏛️</title>
+    <meta name="description" content="Review the Town of Ladysmith municipal bylaws, cast your vote on what to keep or scrap, and see real-time community consensus.">
+    
+    <!-- Google Fonts for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- App Styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Header and Connection Badge -->
+    <header class="app-header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">🏛️</span>
+                <span class="logo-text">Ladysmith <span class="accent">CivicPulse</span></span>
+            </div>
+            <div id="db-status" class="db-status-badge status-mock" title="Database connection status">
+                <span class="status-indicator"></span>
+                <span id="db-status-text">Local Simulated DB</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="app-container">
+        
+        <!-- ================= LANDING SCREEN ================= -->
+        <section id="screen-landing" class="screen active">
+            <div class="hero-section">
+                <h1 class="hero-title">Town of Ladysmith Bylaws:<br><span class="gradient-text">Keep or Scrap?</span></h1>
+                <p class="hero-subtitle">
+                    Municipal bylaws shape our daily lives—from backyard hens and tree cutting to noises and parking. 
+                    Review the Town's active bylaws, cast your vote on which ones make sense, and explore real-time community opinion.
+                </p>
+            </div>
+
+            <div class="setup-notice hidden" id="setup-notice">
+                <div class="notice-icon">⚠️</div>
+                <div class="notice-content">
+                    <h4>Running in local demo mode</h4>
+                    <p>Votes will save to your browser's local storage. Connect to Firebase or Supabase in `config.js` to enable real-time global percentages.</p>
+                </div>
+            </div>
+
+            <div class="mode-selection-grid">
+                <!-- Option 1: Quick Run -->
+                <div class="mode-card" id="btn-mode-quick">
+                    <div class="mode-icon">⚡</div>
+                    <h3 class="mode-name">Quick Scan</h3>
+                    <p class="mode-desc">Review the 8 most talked-about bylaws (Trees, Noise, Animals, Property Maintenance, and more).</p>
+                    <button class="btn btn-primary">Start Quick Scan (8)</button>
+                </div>
+
+                <!-- Option 2: Full Review -->
+                <div class="mode-card" id="btn-mode-full">
+                    <div class="mode-icon">📚</div>
+                    <h3 class="mode-name">Full Town Review</h3>
+                    <p class="mode-desc">Go deep. Review and vote on all 26 general municipal bylaws currently active in Ladysmith.</p>
+                    <button class="btn btn-secondary">Start Full Review (26)</button>
+                </div>
+            </div>
+
+            <div class="info-footer">
+                <p>Anonymized feedback platform. No personal data or IP addresses are logged. Developed for Vancouver Island Regional Database.</p>
+            </div>
+        </section>
+
+        <!-- ================= QUIZ SCREEN ================= -->
+        <section id="screen-quiz" class="screen">
+            <!-- Progress and Filter Bar -->
+            <div class="quiz-controls">
+                <div class="progress-container">
+                    <div class="progress-text-row">
+                        <span id="quiz-progress-text">Bylaw 1 of 8</span>
+                        <span id="quiz-percent-text">0% Complete</span>
+                    </div>
+                    <div class="progress-bar-outer">
+                        <div id="quiz-progress-fill" class="progress-bar-fill" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <!-- Category Filters (Scrollable on Mobile) -->
+                <div class="category-filters-wrapper">
+                    <div class="category-filters" id="category-filters">
+                        <!-- Filters will be generated dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Bylaw Cards Deck -->
+            <div class="deck-container">
+                <div class="cards-deck" id="cards-deck">
+                    <!-- Cards will be injected dynamically via app.js -->
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="quiz-navigation">
+                <button id="btn-prev" class="btn btn-nav btn-disabled" disabled>⬅️ Previous</button>
+                <button id="btn-skip-nav" class="btn btn-nav">Skip Bylaw ⏭️</button>
+                <button id="btn-finish-early" class="btn btn-danger hidden">Finish & See Results 📊</button>
+            </div>
+        </section>
+
+        <!-- ================= RESULTS & DASHBOARD SCREEN ================= -->
+        <section id="screen-results" class="screen">
+            <div class="dashboard-header">
+                <div class="sparkle-icon">📊</div>
+                <h2 class="section-title">Community Consensus Dashboard</h2>
+                <p class="section-subtitle">
+                    Thank you for your feedback! Here is how your views on Town of Ladysmith's bylaws compare to other residents.
+                </p>
+                <div class="dashboard-meta">
+                    <span id="lbl-total-voted">You voted on: 8 / 26 Bylaws</span>
+                    <span id="lbl-consensus-score">Consensus Match: --%</span>
+                </div>
+            </div>
+
+            <!-- Main Insights Panel -->
+            <div class="insights-grid">
+                <!-- Consensus Card: Top Kept -->
+                <div class="insight-card positive">
+                    <div class="insight-header">
+                        <span class="insight-badge badge-keep">💚 Community Favorites</span>
+                    </div>
+                    <p class="insight-desc">Bylaws with the highest percentage of "Keep" votes. The community believes these are essential.</p>
+                    <div class="insight-list" id="list-top-kept">
+                        <!-- Injected dynamically -->
+                    </div>
+                </div>
+
+                <!-- Consensus Card: Top Scrapped -->
+                <div class="insight-card negative">
+                    <div class="insight-header">
+                        <span class="insight-badge badge-scrap">💥 Under Scrutiny</span>
+                    </div>
+                    <p class="insight-desc">Bylaws with the highest "Scrap" sentiment. These are considered outdated, redundant, or overly restrictive.</p>
+                    <div class="insight-list" id="list-top-scrapped">
+                        <!-- Injected dynamically -->
+                    </div>
+                </div>
+
+                <!-- Consensus Card: Confusion Index -->
+                <div class="insight-card warning">
+                    <div class="insight-header">
+                        <span class="insight-badge badge-info">📖 The Knowledge Gaps</span>
+                    </div>
+                    <p class="insight-desc">Bylaws with the most "Don't know enough" selections. These require better public education or simpler wording.</p>
+                    <div class="insight-list" id="list-top-confusing">
+                        <!-- Injected dynamically -->
+                    </div>
+                </div>
+
+                <!-- Consensus Card: Overwhelming/Apathy -->
+                <div class="insight-card info">
+                    <div class="insight-header">
+                        <span class="insight-badge badge-skip">⏭️ Apathy / Skips</span>
+                    </div>
+                    <p class="insight-desc">Bylaws that were skipped most frequently, suggesting they might be too administrative or dry to opinionate.</p>
+                    <div class="insight-list" id="list-top-skipped">
+                        <!-- Injected dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Breakdown Accordion -->
+            <div class="breakdown-section">
+                <h3 class="breakdown-title">Your Voting Log & Global Comparisons</h3>
+                <div class="breakdown-list" id="breakdown-list">
+                    <!-- Injected dynamically -->
+                </div>
+            </div>
+
+            <!-- Action Area -->
+            <div class="results-actions">
+                <button id="btn-share" class="btn btn-primary">🔗 Share Dashboard Link</button>
+                <button id="btn-restart" class="btn btn-secondary">🔄 Start Over</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- App Logic Scripts (type="module" to enable import/export syntax) -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
