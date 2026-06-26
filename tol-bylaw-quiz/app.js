@@ -285,13 +285,13 @@ const QUICK_RUN_IDS = [
 ];
 
 const VOTE_OPTIONS = [
-  { key: "strong_keep", label: "💚 Crucial - Must Keep", class: "opt-keep-strong" },
-  { key: "weak_keep", label: "👍 Keep (Needs Tweak)", class: "opt-keep-weak" },
-  { key: "neutral", label: "🤷 Neutral / Don't Care", class: "opt-neutral" },
-  { key: "weak_scrap", label: "👎 Scrap (Outdated)", class: "opt-scrap-weak" },
-  { key: "strong_scrap", label: "💥 Trash It - Must Scrap", class: "opt-scrap-strong" },
-  { key: "uninformed", label: "📖 Don't know enough / Need to learn more", class: "opt-info" },
-  { key: "skipped", label: "⏭️ Skip / No Opinion", class: "opt-skip" }
+  { key: "strong_keep", label: "💚 Absolutely Essential / This must stay", class: "opt-keep-strong" },
+  { key: "weak_keep", label: "👍 Keep / I think it's good", class: "opt-keep-weak" },
+  { key: "neutral", label: "🛠️ Amend / It needs to be altered", class: "opt-neutral" },
+  { key: "weak_scrap", label: "👎 Eliminate / Unnecessary", class: "opt-scrap-weak" },
+  { key: "strong_scrap", label: "💥 Absolutely Unacceptable / Needs to go", class: "opt-scrap-strong" },
+  { key: "uninformed", label: "📖 I need to know more to have an opinion", class: "opt-info" },
+  { key: "skipped", label: "Don't care / Skip", class: "opt-skip" }
 ];
 
 // ==========================================================================
@@ -1142,7 +1142,7 @@ const App = {
               <div class="comp-fill comp-fill-scrap" style="width: ${pScrap}%"></div>
             </div>
             <div class="comparison-labels" style="font-size: 9px; opacity: 0.7; margin-top: 2px;">
-              <span>Neutral: ${pNeutral}% | Unsure: ${pInfo}% | Skipped: ${pSkip}%</span>
+              <span>Amend: ${pNeutral}% | Unsure: ${pInfo}% | Skipped: ${pSkip}%</span>
               <span>Total Votes: ${total}</span>
             </div>
           </div>

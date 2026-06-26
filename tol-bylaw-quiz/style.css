@@ -671,7 +671,7 @@ body::after {
 .opt-keep-weak .feedback-btn-fill { background-color: hsla(var(--hue-keep), 70%, 45%, 0.15); }
 .opt-scrap-strong .feedback-btn-fill { background-color: hsla(var(--hue-scrap), 75%, 50%, 0.25); }
 .opt-scrap-weak .feedback-btn-fill { background-color: hsla(var(--hue-scrap), 75%, 50%, 0.15); }
-.opt-neutral .feedback-btn-fill { background-color: rgba(255, 255, 255, 0.08); }
+.opt-neutral .feedback-btn-fill { background-color: hsla(var(--hue-warning), 90%, 50%, 0.15); }
 .opt-info .feedback-btn-fill { background-color: hsla(var(--hue-info), 75%, 45%, 0.15); }
 .opt-skip .feedback-btn-fill { background-color: rgba(255, 255, 255, 0.04); }
 
@@ -689,7 +689,7 @@ body::after {
     border-color: var(--color-scrap);
     box-shadow: 0 0 12px hsla(var(--hue-scrap), 75%, 50%, 0.2);
 }
-.feedback-btn.answered-user-choice.opt-neutral { border-color: var(--text-muted); }
+.feedback-btn.answered-user-choice.opt-neutral { border-color: var(--color-warning); box-shadow: 0 0 12px hsla(var(--hue-warning), 90%, 50%, 0.2); }
 .feedback-btn.answered-user-choice.opt-info { border-color: var(--color-info); }
 .feedback-btn.answered-user-choice.opt-skip { border-color: var(--text-dark); }
 
@@ -921,7 +921,7 @@ body::after {
 /* User Vote Pill Types */
 .user-vote-keep { background-color: hsla(var(--hue-keep), 70%, 45%, 0.15); color: var(--color-keep); }
 .user-vote-scrap { background-color: hsla(var(--hue-scrap), 75%, 50%, 0.15); color: var(--color-scrap); }
-.user-vote-neutral { background-color: rgba(255, 255, 255, 0.05); color: var(--text-muted); }
+.user-vote-neutral { background-color: hsla(var(--hue-warning), 90%, 50%, 0.15); color: var(--color-warning); }
 .user-vote-info { background-color: hsla(var(--hue-info), 75%, 45%, 0.15); color: var(--color-info); }
 .user-vote-skip { background-color: rgba(255, 255, 255, 0.02); color: var(--text-dark); }
 
@@ -950,7 +950,7 @@ body::after {
 }
 .comp-fill-keep { background-color: var(--color-keep); }
 .comp-fill-scrap { background-color: var(--color-scrap); }
-.comp-fill-neutral { background-color: var(--text-muted); }
+.comp-fill-neutral { background-color: var(--color-warning); }
 .comp-fill-info { background-color: var(--color-info); }
 .comp-fill-skip { background-color: rgba(255, 255, 255, 0.05); }
 
