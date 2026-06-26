@@ -25,6 +25,9 @@
     
     --color-info: hsl(var(--hue-info), 75%, 45%);
     --color-warning: hsl(var(--hue-warning), 90%, 50%);
+
+        /* NEW BRAND VARIABLE (#FCBA19) */
+    --color-brand-yellow: hsl(42, 97%, 54%);
     
     /* Neutral Shades (Dark Theme Default) */
     --bg-app: hsl(222, 47%, 10%);
