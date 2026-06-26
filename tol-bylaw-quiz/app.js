@@ -285,12 +285,12 @@ const QUICK_RUN_IDS = [
 ];
 
 const VOTE_OPTIONS = [
-  { key: "strong_keep", label: "💚 Absolutely Essential / This must stay", class: "opt-keep-strong" },
   { key: "weak_keep", label: "👍 Keep / I think it's good", class: "opt-keep-weak" },
-  { key: "neutral", label: "🛠️ Amend / It needs to be altered", class: "opt-neutral" },
+  { key: "strong_keep", label: "❤️ Absolutely Essential / This must stay", class: "opt-keep-strong" },
   { key: "weak_scrap", label: "👎 Eliminate / Unnecessary", class: "opt-scrap-weak" },
-  { key: "strong_scrap", label: "💥 Absolutely Unacceptable / Needs to go", class: "opt-scrap-strong" },
-  { key: "uninformed", label: "📖 I need to know more to have an opinion", class: "opt-info" },
+  { key: "strong_scrap", label: "❌ Absolutely Unacceptable / Needs to go", class: "opt-scrap-strong" },
+  { key: "neutral", label: "✍🏼 Amend / It needs to be altered", class: "opt-neutral" },
+  { key: "uninformed", label: "🤷🏽 I need to know more to have an opinion", class: "opt-info" },
   { key: "skipped", label: "Don't care / Skip", class: "opt-skip" }
 ];
 
