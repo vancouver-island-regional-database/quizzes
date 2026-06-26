@@ -5,228 +5,94 @@ import CONFIG from './config.js';
 // ==========================================================================
 const BYLAWS_DATA = [
   {
-    id: "bylaw_411",
-    number: "411",
-    name: "Sewer Connection Bylaw",
-    category: "utilities",
-    categoryLabel: "Public Works & Utilities",
-    purpose: "Regulates the connection of properties to the municipal sewer system, wastewater discharge rules, sewer fees, and hookup standards.",
-    regulations: [
-      "Mandates connection to municipal sewers for all properties within 150 feet of a sewer line.",
-      "Prohibits drainage of surface water (gutters, footing drains, sump pumps) into the sanitary sewer.",
-      "Bans disposal of hazardous industrial chemicals, solids, and grease into the sewer system."
-    ],
-    onlineLink: "https://www.ladysmith.ca/docs/default-source/bylaws-2021/sewer-connection-bylaw.pdf"
+    id: "bylaw_2122_2189",
+    number: "2122 / 2189",
+    name: "Permissive Tax Exemption Bylaw",
+    category: "admin",
+    categoryLabel: "Administration & Governance",
+    conversation: "Every year, Council votes on which local non-profits, churches, and senior housing societies get a 100% break on their property taxes. The public debate is a fierce clash over who should carry the tax burden. Homeowners, already squeezed by rising municipal taxes, argue that giving multi-year breaks to massive groups or specific properties forces everyday residential taxpayers to pick up the tab. On the other side, supporters argue that cutting these exemptions is cruel, starves local volunteer services, and directly drives up rents for vulnerable seniors.",
+    onlineLink: "https://www.ladysmith.ca/docs/default-source/bylaws-2021/2189_2025_permissive_tax_exemptions.pdf"
   },
   {
-    id: "bylaw_695",
-    number: "695",
-    name: "Tree Protection Bylaw",
+    id: "bylaw_2188_2205",
+    number: "2188 / 2205",
+    name: "Short-Term Rental Bylaw / Business Licence Amendments",
     category: "development",
     categoryLabel: "Land Use & Development",
-    purpose: "Regulates the cutting, removal, and replacement of trees on private properties to preserve municipal tree canopy.",
-    regulations: [
-      "Requires a tree cutting permit before removing any tree of a specified size (diameter at breast height).",
-      "Imposes replacement tree ratios (typically 2 replacement trees for every 1 tree cut).",
-      "Requires submission of arborist reports and tree protection plans prior to property development."
-    ],
-    onlineLink: "https://pub-ladysmith.escribemeetings.com/FileStream.ashx?DocumentId=5745"
+    conversation: "With the Town cracking down on unpermitted Airbnbs and VRBOs, Ladysmith strictly bans renting out entire secondary suites or detached coach houses to short-term tourists, forcing operators to pay steep $1,500 Temporary Use Permit fees. The debate is between residents who want these platforms strictly outlawed to protect the long-term rental market and keep strangers out of quiet residential areas, and property owners who argue that short-term rentals bring vital tourist dollars to local shops and provide crucial income to help locals survive high mortgage rates.",
+    onlineLink: "https://www.ladysmith.ca/docs/default-source/bylaws-2021/2188_short_term_rental_marketing_regulation_bylaw.pdf"
   },
   {
-    id: "bylaw_1176",
-    number: "1176",
-    name: "Sign and Canopy Bylaw",
-    category: "development",
-    categoryLabel: "Land Use & Development",
-    purpose: "Regulates the size, type, location, and maintenance of signs, canopies, and awnings on buildings and properties.",
-    regulations: [
-      "Requires a sign permit for all new commercial exterior signs.",
-      "Restricts sign types (prohibits flashing lights, animated signs, or digital message boards in heritage areas).",
-      "Mandates structural safety and maintenance standards for awnings and canopies hanging over public sidewalks."
-    ],
-    onlineLink: "http://www.ladysmith.ca/docs/bylaws/1176-sign-and-canopy-bylaw-consolidated.pdf"
-  },
-  {
-    id: "bylaw_1309",
-    number: "1309",
-    name: "Streets and Traffic Bylaw",
+    id: "bylaw_1298",
+    number: "1298",
+    name: "Water Conservation & Regulations Bylaw",
     category: "utilities",
     categoryLabel: "Public Works & Utilities",
-    purpose: "Regulates traffic, parking, street use, vehicle weights, and sidewalk maintenance, ensuring public safety on municipal streets.",
-    regulations: [
-      "Establishes overnight parking bans on designated streets to allow for emergency vehicle clearance.",
-      "Mandates that property owners clear snow and ice from sidewalks adjoining their property within 24 hours.",
-      "Requires town permits for temporary street blockages, parades, utility excavations, or heavy vehicle transport."
-    ],
-    onlineLink: "https://www.ladysmith.ca/docs/default-source/bylaws-2021/1309-streets-and-traffic-bylaw-consolidated.pdf"
+    conversation: "The community flashpoint is the frustration over strict lawn sprinkling bans and rigid watering schedules during hot summer months. Many residents strongly object to letting their expensive lawns die and facing heavy fines for trying to keep gardens alive. Meanwhile, other citizens argue that zero-tolerance water restrictions are the only way to prevent the town's local reservoirs from running completely dry.",
+    onlineLink: "https://pub-ladysmith.escribemeetings.com/FileStream.ashx?DocumentId=5933"
   },
   {
     id: "bylaw_1457",
-    number: "1457",
+    number: "1457 Consolidated",
     name: "Ticket Information Utilization Bylaw",
     category: "admin",
     categoryLabel: "Administration & Governance",
-    purpose: "Authorizes the use of municipal ticket information (tickets) for enforcing municipal bylaws and defines fine structures.",
-    regulations: [
-      "Designates which municipal officers (Bylaw Officers, RCMP, Fire Chiefs) can issue fines.",
-      "Sets out the schedule of standard fine amounts for specific infractions (e.g. noise, off-leash dogs).",
-      "Establishes the voluntary payment discount and dispute procedures for municipal tickets."
-    ],
+    conversation: "Public debate centers on whether the town's $100 to $250 standard tickets actually work. One group of neighbors argues that these low penalty amounts are just a minor slap on the wrist that repeat rule-breakers completely ignore. On the other side, regular citizens feel that increasing these fines turns minor bylaw mistakes into an aggressive municipal cash grab that unfairly punishes ordinary people.",
     onlineLink: "https://www.ladysmith.ca/docs/default-source/bylaws-2021/1457-ticket-information-utilization-bylaw-consolidation.pdf"
   },
   {
-    id: "bylaw_1478",
-    number: "1478",
-    name: "Noise Control Bylaw",
-    category: "safety",
-    categoryLabel: "Public Health & Safety",
-    purpose: "Regulates and prohibits loud, unnecessary, or disruptive noises at specific hours to prevent disturbance and maintain peace.",
-    regulations: [
-      "Sets quiet hours prohibiting construction noise, loud music, and power tools between 7 PM and 7 AM.",
-      "Prohibits persistent dog barking or animal noises that disturb the peace of neighbors.",
-      "Allows for noise permit exemptions for community festivals, public works, or approved construction projects."
-    ],
-    onlineLink: "https://www.ladysmith.ca/docs/bylaws/1478-noise-bylaw.pdf"
-  },
-  {
-    id: "bylaw_1513",
-    number: "1513",
-    name: "Business Licence Bylaw",
-    category: "licensing",
-    categoryLabel: "Business & Licensing",
-    purpose: "Requires all businesses operating in Ladysmith to obtain an annual licence and regulates terms of operation.",
-    regulations: [
-      "Mandates that all brick-and-mortar, mobile, or home-based businesses obtain a valid Town business licence.",
-      "Regulates home-based businesses (restricts customer visits, storage of goods, and signage in residential zones).",
-      "Authorizes inspections by building, fire, and health inspectors prior to licence approval."
-    ],
-    onlineLink: "https://www.ladysmith.ca/docs/default-source/bylaws-2021/2230-inter-community-business-licence-bylaw.pdf"
-  },
-  {
-    id: "bylaw_1588",
-    number: "1588",
-    name: "Garbage, Recycling and Organics Collection Bylaw",
-    category: "utilities",
-    categoryLabel: "Public Works & Utilities",
-    purpose: "Establishes rules and schedules for municipal solid waste collection, recycling, and organic waste disposal.",
-    regulations: [
-      "Requires sorting of waste into garbage, recycling, and organic bins; prohibits mixing recyclables with garbage.",
-      "Mandates secure, wildlife-resistant containers to prevent attracting bears, cougars, or pests.",
-      "Restricts the timing of bin placement (bins must not be placed at the curb before 5 AM on collection day)."
-    ],
-    onlineLink: "https://www.ladysmith.ca/docs/default-source/bylaws-2021/1588-garbage-recycling-and-organics-collection-bylaw-consolidated.pdf"
-  },
-  {
-    id: "bylaw_1625",
-    number: "1625",
-    name: "Revitalization Tax Exemption Bylaw",
-    category: "admin",
-    categoryLabel: "Administration & Governance",
-    purpose: "Establishes tax exemption programs to encourage revitalization in the downtown core and other target areas.",
-    regulations: [
-      "Offers property tax relief for property owners who invest in building improvements in the downtown commercial zone.",
-      "Specifies minimum investment thresholds and construction standards to qualify for exemptions.",
-      "Requires formal revitalization agreements specifying target timelines and design guidelines."
-    ],
-    onlineLink: "https://pub-ladysmith.escribemeetings.com/FileStream.ashx?DocumentId=6672"
-  },
-  {
-    id: "bylaw_1644",
-    number: "1644",
-    name: "Fees and Charges Bylaw",
-    category: "admin",
-    categoryLabel: "Administration & Governance",
-    purpose: "Establishes fees and charges payable for various municipal services, applications, and information requests.",
-    regulations: [
-      "Sets fee structures for Freedom of Information (FOI) requests, copying documents, and property search tax certificates.",
-      "Establishes pricing for maps, engineering standards documents, and administrative processing fees.",
-      "Provides for annual adjustments of service fees to offset inflation."
-    ],
-    onlineLink: "https://www.ladysmith.ca/docs/default-source/bylaws-2021/1644-fees-and-charges-consolidation.pdf"
-  },
-  {
-    id: "bylaw_1666",
-    number: "1666",
-    name: "Council Procedure Bylaw",
-    category: "admin",
-    categoryLabel: "Administration & Governance",
-    purpose: "Establishes rules of order and procedures for meetings of Town Council, committees, and public notice guidelines.",
-    regulations: [
-      "Defines the dates, locations, and structural agenda layout for regular Council and committee meetings.",
-      "Establishes a 15-minute public question period limit and delegates how long citizens can speak (maximum 5 minutes).",
-      "Sets rules for calling closed 'in-camera' meetings for property, legal, or personnel issues."
-    ],
-    onlineLink: "https://www.ladysmith.ca/docs/default-source/bylaws-2021/1666-council-procedure-bylaw-consolidated.pdf"
-  },
-  {
-    id: "bylaw_1668",
-    number: "1668",
-    name: "Cemetery Bylaw",
-    category: "admin",
-    categoryLabel: "Administration & Governance",
-    purpose: "Regulates the operation, maintenance, fees, and burial procedures at the municipal cemetery.",
-    regulations: [
-      "Sets prices for burial plots, cremation niches, liners, and administrative opening/closing fees.",
-      "Restricts the sizing, material (granite/bronze), and layout of headstones and flat grave markers.",
-      "Prohibits planting of private shrubs/trees and governs when decorative flowers are removed by maintenance staff."
-    ],
-    onlineLink: "https://www.ladysmith.ca/docs/default-source/bylaws-2021/1668-cemetery-bylaw.pdf"
-  },
-  {
-    id: "bylaw_1815",
-    number: "1815",
-    name: "Fire Prevention Bylaw",
-    category: "safety",
-    categoryLabel: "Public Health & Safety",
-    purpose: "Regulates fire safety measures, open burning, fire hazards, inspections, and emergency access.",
-    regulations: [
-      "Bans all open backyard burning and land clearing debris fires; campfires require specific fire safety conditions.",
-      "Establishes the authority of Fire Inspectors to enter commercial properties to inspect fire alarms and extinguishers.",
-      "Imposes requirements to clear accumulated dry brush, woodpiles, or flammable rubbish from properties."
-    ],
-    onlineLink: "https://www.ladysmith.ca/docs/default-source/bylaws-2021/1815-fire-prevention-bylaw-2013.pdf"
+    id: "bylaw_1176",
+    number: "1176 Consolidated",
+    name: "Sign and Canopy Bylaw",
+    category: "development",
+    categoryLabel: "Land Use & Development",
+    conversation: "The main public clash is over the mandatory look of First Avenue. Many residents and heritage groups strongly support strict rules on paint colors and signage, arguing it's the only way to save Ladysmith's unique historic charm and keep tourist dollars coming in. Meanwhile, local business owners feel the micro-management is heavy-handed and expensive, arguing they should have the freedom to choose their own storefront designs and use modern marketing to survive.",
+    onlineLink: "http://www.ladysmith.ca/docs/bylaws/1176-sign-and-canopy-bylaw-consolidated.pdf"
   },
   {
     id: "bylaw_1860",
-    number: "1860",
+    number: "1860 Consolidated",
     name: "Zoning Bylaw",
     category: "development",
     categoryLabel: "Land Use & Development",
-    purpose: "Regulates land use, building heights, setbacks, lot sizes, density, and parking requirements across Ladysmith.",
-    regulations: [
-      "Divides the town into zoning districts (residential, commercial, agricultural) with exclusive permitted land uses.",
-      "Imposes setbacks (minimum distances buildings must sit from front, rear, and side property lines).",
-      "Governs accessory structures (sheds, detached suites/coach houses) and sets minimum off-street parking counts."
-    ],
+    conversation: "Citizens are furious about the massive financial and space hurdles homeowners face when trying to build affordable housing. Locals heavily complain that the Town charges double utility fees year-round even if a suite sits empty, bans having both a suite and a coach house on one lot, and forces homeowners to lose yard space for a mandatory parking stall. The debate is between people who want these costly rules stripped away to help folks afford their mortgages, and neighbors who worry that loosening things up will ruin backyard privacy and clog local streets with parked cars.",
     onlineLink: "https://www.ladysmith.ca/docs/default-source/bylaws-2021/1860-schedule-a_zoning-bylaw-consolidation-november2024-website.pdf"
   },
   {
-    id: "bylaw_1970",
-    number: "1970",
-    name: "Property Maintenance Bylaw",
+    id: "bylaw_1588",
+    number: "1588 Consolidated",
+    name: "Garbage, Recycling, and Organics Collection Bylaw",
+    category: "utilities",
+    categoryLabel: "Public Works & Utilities",
+    conversation: "Public frustration centers on the bi-weekly schedule and tiny bin limits. Larger families complain that forcing them down to one small can every two weeks—or paying extra out of pocket for tags—causes rotting garbage buildup, attracts wildlife, and penalizes normal households. Proponents argue that tight restrictions are the only way to force people to compost properly and prevent residents from tossing recyclable plastics into the landfill.",
+    onlineLink: "https://www.ladysmith.ca/docs/default-source/bylaws-2021/1588-garbage-recycling-and-organics-collection-bylaw-consolidated.pdf"
+  },
+  {
+    id: "bylaw_1815_2147_2204",
+    number: "1815 / 2147 / 2204",
+    name: "Fire Prevention & Fire Services Bylaw",
     category: "safety",
     categoryLabel: "Public Health & Safety",
-    purpose: "Regulates property conditions, untidy properties, rubbish, weeds, graffiti, and derelict vehicles to prevent decay.",
-    regulations: [
-      "Prohibits properties from becoming untidy, accumulating garbage, or having overgrown weeds/grass exceeding 20cm.",
-      "Bans storing unregistered, inoperable, or derelict vehicles on private properties unless fully enclosed in a building.",
-      "Requires property owners to remove graffiti spray-painted on building walls within a specified timeframe."
-    ],
-    onlineLink: "https://pub-ladysmith.escribemeetings.com/FileStream.ashx?DocumentId=6575"
+    conversation: "The main neighborhood clash is over smoke and fire safety. Many residents want a total ban on all backyard fires, arguing that smoke ruins outdoor air quality for neighbors and poses a massive wildfire risk during dry seasons. On the other hand, homeowners with property debris feel the rules are already too extreme, arguing that responsible citizens should be allowed to have backyard fires or clear yard waste without being treated like criminals.",
+    onlineLink: "https://www.ladysmith.ca/docs/default-source/bylaws-2021/1815-fire-prevention-bylaw-2013.pdf"
   },
   {
     id: "bylaw_2115",
     number: "2115",
-    name: "Fireworks Bylaw",
+    name: "Fireworks Regulation Bylaw",
     category: "safety",
     categoryLabel: "Public Health & Safety",
-    purpose: "Regulates the sale, possession, and discharge of fireworks in Ladysmith, prohibiting discharge without a permit.",
-    regulations: [
-      "Bans the sale of all fireworks within town limits; possession and discharge require a written permit from the Fire Chief.",
-      "Limits approved discharge times strictly to Halloween night and New Year's Eve, subject to permit validation.",
-      "Requires permit applicants to hold a liability insurance policy (typically $2,000,000) naming the Town."
-    ],
+    conversation: "The community debate is a fierce clash between pet owners and holiday celebrators. A large group of residents wants a 100% total ban on all personal fireworks, pointing out that holiday explosions terrify local dogs, distress nearby livestock, and trigger PTSD for veterans. Meanwhile, other citizens argue that the current permit system for family events like Halloween works fine and shouldn't be ruined because of a few irresponsible people.",
     onlineLink: "http://www.ladysmith.ca/docs/bylaws/cvrd-fireworks-bylaw-consolidated-2015.pdf"
+  },
+  {
+    id: "bylaw_1478",
+    number: "1478",
+    name: "Noise Suppression Bylaw",
+    category: "safety",
+    categoryLabel: "Public Health & Safety",
+    conversation: "Currently, noisy construction and commercial property maintenance are allowed from 7:00 AM to 9:00 PM, Monday through Saturday. The debate centers on whether the town should restrict these hours on weekends to protect neighborhood quiet, or keep them as-is so home projects and local builders aren't delayed or made more expensive.",
+    onlineLink: "https://www.ladysmith.ca/docs/bylaws/1478-noise-bylaw.pdf"
   },
   {
     id: "bylaw_2167",
@@ -234,63 +100,26 @@ const BYLAWS_DATA = [
     name: "Animal Control Bylaw",
     category: "safety",
     categoryLabel: "Public Health & Safety",
-    purpose: "Regulates the keeping of animals, licensing of dogs, animal control enforcement, leash laws, and backyard poultry.",
-    regulations: [
-      "Requires all dogs over 6 months to wear a license tag; limits households to a maximum of 3 dogs and 3 cats.",
-      "Mandates that dogs be kept on-leash in all public spaces unless inside designated off-leash park boundaries.",
-      "Governs backyard hens: allowed on residential lots with a maximum of 4 hens, zero roosters, and secure coop fencing."
-    ],
+    conversation: "Ladysmith citizens explicitly focus on personal food freedom versus neighborhood disruption. Supporters want the backyard chicken rules expanded to allow more hens and small livestock for local food security and affordable eggs. Opponents strongly object, arguing that more backyard animals bring unwanted smells, noise, and actively attract dangerous local predators like raccoons, bears, and cougars right into residential yards.",
     onlineLink: "https://pub-ladysmith.escribemeetings.com/FileStream.ashx?DocumentId=7041"
   },
   {
-    id: "bylaw_2174",
-    number: "2174",
-    name: "Building and Plumbing Bylaw",
-    category: "development",
-    categoryLabel: "Land Use & Development",
-    purpose: "Regulates construction, alteration, repair, demolition, and moving of buildings, and the installation of plumbing.",
-    regulations: [
-      "Requires a formal building permit prior to constructing, modifying, or demolishing structural walls or plumbing lines.",
-      "Imposes compliance inspections at structural milestones (excavation, framing, insulation, plumbing, and final).",
-      "Mandates adherence to the BC Building Code and local energy efficiency steps (Energy Step Code)."
-    ],
-    onlineLink: "https://www.ladysmith.ca/docs/default-source/bylaws-2021/2174_building-and-plumbing-bylaw-2024404b94fa7dea659dad49ff0000e75dbc.pdf"
-  },
-  {
-    id: "bylaw_2200",
-    number: "2200",
-    name: "Official Community Plan (OCP) Bylaw",
-    category: "development",
-    categoryLabel: "Land Use & Development",
-    purpose: "Sets out the long-term vision, growth strategies, and planning policies for land use, housing, and infrastructure.",
-    regulations: [
-      "Defines future land-use maps determining where commercial development, high-density housing, or parks will go.",
-      "Establishes Development Permit Areas (DPAs) imposing design regulations for environmental protection and wildfire safety.",
-      "Lays down policies for greenhouse gas reduction, community amenities, and heritage preservation guidelines."
-    ],
-    onlineLink: "https://www.ladysmith.ca/docs/default-source/bylaws-2021/2200-official-community-plan-2023-consolidated-compressed.pdf"
+    id: "bylaw_1309",
+    number: "1309 Consolidated",
+    name: "Streets and Traffic Bylaw",
+    category: "utilities",
+    categoryLabel: "Public Works & Utilities",
+    conversation: "Public frustration centers on what people are allowed to leave on the street. Residents who want strict enforcement complain about people using public roads and boulevards for long-term storage of unattached boats, massive RVs, and uninsured vehicles that clog up local parking. Conversely, other locals feel the strict 72-hour parking limit unfairly penalizes homeowners who just need a place to park their recreational vehicles or handle visiting guests.",
+    onlineLink: "https://www.ladysmith.ca/docs/default-source/bylaws-2021/1309-streets-and-traffic-bylaw-consolidated.pdf"
   }
 ];
 
-// Curated high-interest bylaws list for the "Quick Scan" mode
-const QUICK_RUN_IDS = [
-  "bylaw_695",   // Tree Protection
-  "bylaw_1478",  // Noise Control
-  "bylaw_1309",  // Streets & Traffic
-  "bylaw_1588",  // Garbage & Bears
-  "bylaw_1970",  // Property Maintenance
-  "bylaw_2115",  // Fireworks
-  "bylaw_2167",  // Animal Control
-  "bylaw_1860"   // Zoning
-];
-
 const VOTE_OPTIONS = [
-  { key: "weak_keep", label: "👍 Keep / I think it's good", class: "opt-keep-weak" },
-  { key: "strong_keep", label: "❤️ Absolutely Essential / This must stay", class: "opt-keep-strong" },
-  { key: "weak_scrap", label: "👎 Eliminate / Unnecessary", class: "opt-scrap-weak" },
-  { key: "strong_scrap", label: "❌ Absolutely Unacceptable / Needs to go", class: "opt-scrap-strong" },
-  { key: "neutral", label: "✍🏼 Amend / It needs to be altered", class: "opt-neutral" },
-  { key: "uninformed", label: "🤷🏽 I need to know more to have an opinion", class: "opt-info" },
+  { key: "weak_keep", label: "👍  Keep: It's fine the way it is", class: "opt-keep-weak" },
+  { key: "weak_scrap", label: "👎  Amend: This needs to change", class: "opt-scrap-weak" },
+  { key: "strong_keep", label: "❤️  Canon: Absolutely essential <i>(strong opinion)</i>", class: "opt-keep-strong" },
+  { key: "strong_scrap", label: "❌  Repeal: This needs to be removed <i>(strong opinion)</i>", class: "opt-scrap-strong" },
+  { key: "uninformed", label: "🤷🏽  I don't know enough to have an opinion. I'd like to be better informed", class: "opt-info" },
   { key: "skipped", label: "Don't care / Skip", class: "opt-skip" }
 ];
 
@@ -327,25 +156,25 @@ const MockDBClient = {
     const baseTotal = 150 + Math.floor(seedRandom(1) * 300); // 150 - 450 total votes
     
     // Vary profiles based on the bylaw type to make simulation realistic
-    let pKeep = 0.4, pScrap = 0.3, pNeutral = 0.15, pInfo = 0.1, pSkip = 0.05;
-    if (bylawId === 'bylaw_695' || bylawId === 'bylaw_2167') { // Trees and Animals usually heavily split
-      pKeep = 0.45; pScrap = 0.40;
-    } else if (bylawId === 'bylaw_2115') { // Fireworks: highly scrapped or kept strongly
-      pKeep = 0.25; pScrap = 0.60;
-    } else if (bylawId === 'bylaw_411' || bylawId === 'bylaw_1588') { // Utilities: mostly kept
-      pKeep = 0.75; pScrap = 0.10;
-    } else if (bylawId === 'bylaw_1644' || bylawId === 'bylaw_1666') { // Admin: high skip / uninformed rates
-      pNeutral = 0.3; pInfo = 0.3; pKeep = 0.2; pScrap = 0.1; pSkip = 0.1;
+    let pKeep = 0.45, pScrap = 0.35, pInfo = 0.1, pSkip = 0.1;
+    if (bylawId === 'bylaw_2167' || bylawId === 'bylaw_1860' || bylawId === 'bylaw_2188_2205') { // Split/Divisive
+      pKeep = 0.40; pScrap = 0.40; pInfo = 0.10; pSkip = 0.10;
+    } else if (bylawId === 'bylaw_2115' || bylawId === 'bylaw_2122_2189') { // Contentious
+      pKeep = 0.30; pScrap = 0.50; pInfo = 0.10; pSkip = 0.10;
+    } else if (bylawId === 'bylaw_1298' || bylawId === 'bylaw_1588') { // Utilities kept
+      pKeep = 0.70; pScrap = 0.15; pInfo = 0.05; pSkip = 0.10;
+    } else if (bylawId === 'bylaw_1457') { // Ticket info: high skip / unsure
+      pInfo = 0.30; pKeep = 0.30; pScrap = 0.20; pSkip = 0.20;
     }
 
     const counts = {
       strong_keep: Math.round(baseTotal * pKeep * 0.6),
       weak_keep: Math.round(baseTotal * pKeep * 0.4),
-      neutral: Math.round(baseTotal * pNeutral),
       weak_scrap: Math.round(baseTotal * pScrap * 0.4),
       strong_scrap: Math.round(baseTotal * pScrap * 0.6),
       uninformed: Math.round(baseTotal * pInfo),
-      skipped: Math.round(baseTotal * pSkip)
+      skipped: Math.round(baseTotal * pSkip),
+      neutral: 0
     };
     return counts;
   },
@@ -527,7 +356,6 @@ const App = {
   currentIndex: 0,
   userVotes: {},      // stores bylawId -> optionKey
   globalVotes: {},    // stores bylawId -> counts object
-  mode: 'quick',      // 'quick' | 'full'
   
   // Element caching
   elements: {
@@ -612,9 +440,11 @@ const App = {
 
   // Setup UI bindings
   setupEventListeners() {
-    // Mode selection triggers
-    document.getElementById('btn-mode-quick').addEventListener('click', () => this.startQuiz('quick'));
-    document.getElementById('btn-mode-full').addEventListener('click', () => this.startQuiz('full'));
+    // Start quiz trigger
+    const startQuizBtn = document.getElementById('btn-start-quiz');
+    if (startQuizBtn) {
+      startQuizBtn.addEventListener('click', () => this.startQuiz());
+    }
     
     // Quiz navigation triggers
     this.elements.btnPrev.addEventListener('click', () => this.navigateDeck(-1));
@@ -641,16 +471,9 @@ const App = {
   },
 
   // Quiz launcher
-  startQuiz(mode) {
-    this.mode = mode;
+  startQuiz() {
     this.currentIndex = 0;
-    
-    // Assemble card array
-    if (mode === 'quick') {
-      this.activeBylaws = BYLAWS_DATA.filter(b => QUICK_RUN_IDS.includes(b.id));
-    } else {
-      this.activeBylaws = [...BYLAWS_DATA];
-    }
+    this.activeBylaws = [...BYLAWS_DATA];
 
     this.renderCategoryFilters();
     this.renderDeck();
@@ -716,20 +539,16 @@ const App = {
       card.className = `bylaw-card ${idx === 0 ? 'active' : ''}`;
       card.dataset.index = idx;
       
-      // Structure card text details
-      const listItems = bylaw.regulations.map(reg => `<li>${reg}</li>`).join('');
-      
       card.innerHTML = `
         <div class="card-header-row">
           <span class="card-category category-${bylaw.category}">${bylaw.categoryLabel}</span>
           <span class="card-bylaw-num">Bylaw #${bylaw.number}</span>
         </div>
         <h3 class="card-title">${bylaw.name}</h3>
-        <p class="card-purpose">${bylaw.purpose}</p>
         
-        <div class="card-regulations">
-          <h5>Key Regulations for Residents:</h5>
-          <ul>${listItems}</ul>
+        <div class="card-conversation">
+          <h5>Community Conversation:</h5>
+          <p>${bylaw.conversation}</p>
         </div>
         
         <div class="card-references">
@@ -754,8 +573,8 @@ const App = {
         
         // Button classes
         let btnClasses = `feedback-btn ${opt.class}`;
-        if (opt.key === 'skipped') {
-          btnClasses += ' grid-span-2'; // Stretch skip option to span full width
+        if (opt.key === 'skipped' || opt.key === 'uninformed') {
+          btnClasses += ' grid-span-2'; // Stretch to span full width
         }
         btn.className = btnClasses;
         btn.dataset.option = opt.key;
@@ -801,8 +620,8 @@ const App = {
     this.elements.btnPrev.className = this.currentIndex === 0 ? "btn btn-nav btn-disabled" : "btn btn-nav";
     this.elements.btnPrev.disabled = this.currentIndex === 0;
 
-    // Show "Finish Early" if they have voted on at least 3 things and it's full mode
-    if (votedCount >= 3 && this.mode === 'full') {
+    // Show "Finish Early" if they have voted on at least 3 things
+    if (votedCount >= 3) {
       this.elements.btnFinish.classList.remove('hidden');
     } else {
       this.elements.btnFinish.classList.add('hidden');
@@ -1108,17 +927,18 @@ const App = {
       
       if (userVoteKey && userVoteKey !== 'skipped') {
         const option = VOTE_OPTIONS.find(o => o.key === userVoteKey);
-        userVoteText = option ? option.label : "Voted";
+        // Strip HTML tags like <i> from display text
+        userVoteText = option ? option.label.replace(/<\/?[^>]+(>|$)/g, "") : "Voted";
         if (userVoteKey.includes('keep')) userVoteClass = "user-vote-keep";
-        else if (userVoteKey.includes('scrap')) userVoteClass = "user-vote-scrap";
-        else if (userVoteKey === 'neutral') userVoteClass = "user-vote-neutral";
-        else if (userVoteKey === 'uninformed') userVoteClass = "user-vote-info";
+        else if (userVoteKey === 'weak_scrap') userVoteClass = "user-vote-neutral"; // Amend (Amber)
+        else if (userVoteKey === 'strong_scrap') userVoteClass = "user-vote-scrap"; // Repeal (Red)
+        else if (userVoteKey === 'uninformed') userVoteClass = "user-vote-info"; // Unsure (Grey)
       }
 
       // Calculations for comparisons
       const pKeep = total > 0 ? Math.round(((counts.strong_keep + counts.weak_keep) / total) * 100) : 0;
-      const pScrap = total > 0 ? Math.round(((counts.strong_scrap + counts.weak_scrap) / total) * 100) : 0;
-      const pNeutral = total > 0 ? Math.round((counts.neutral / total) * 100) : 0;
+      const pAmend = total > 0 ? Math.round((counts.weak_scrap / total) * 100) : 0;
+      const pRepeal = total > 0 ? Math.round((counts.strong_scrap / total) * 100) : 0;
       const pInfo = total > 0 ? Math.round((counts.uninformed / total) * 100) : 0;
       const pSkip = total > 0 ? Math.round((counts.skipped / total) * 100) : 0;
 
@@ -1132,17 +952,17 @@ const App = {
           <div class="comparison-bar-container">
             <div class="comparison-labels">
               <span>Keep (${pKeep}%)</span>
-              <span>Scrap (${pScrap}%)</span>
+              <span>Repeal (${pRepeal}%)</span>
             </div>
             <div class="comparison-bar">
               <div class="comp-fill comp-fill-keep" style="width: ${pKeep}%"></div>
-              <div class="comp-fill comp-fill-neutral" style="width: ${pNeutral}%"></div>
+              <div class="comp-fill comp-fill-neutral" style="width: ${pAmend}%"></div>
               <div class="comp-fill comp-fill-info" style="width: ${pInfo}%"></div>
               <div class="comp-fill comp-fill-skip" style="width: ${pSkip}%"></div>
-              <div class="comp-fill comp-fill-scrap" style="width: ${pScrap}%"></div>
+              <div class="comp-fill comp-fill-scrap" style="width: ${pRepeal}%"></div>
             </div>
             <div class="comparison-labels" style="font-size: 9px; opacity: 0.7; margin-top: 2px;">
-              <span>Amend: ${pNeutral}% | Unsure: ${pInfo}% | Skipped: ${pSkip}%</span>
+              <span>Amend: ${pAmend}% | Repeal: ${pRepeal}% | Unsure: ${pInfo}% | Skipped: ${pSkip}%</span>
               <span>Total Votes: ${total}</span>
             </div>
           </div>

@@ -275,6 +275,11 @@ body::after {
     gap: 24px;
     margin-bottom: 40px;
 }
+.mode-selection-grid.single-mode-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto 40px auto;
+}
 .mode-card {
     background-color: var(--bg-card);
     border: 1px solid var(--border-light);
@@ -522,35 +527,30 @@ body::after {
     line-height: 1.25;
     letter-spacing: -0.5px;
 }
-.card-purpose {
+/* Card Conversation Paragraph */
+.card-conversation {
     font-size: 15px;
     color: var(--text-main);
-    margin-bottom: 16px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid var(--border-light);
-}
-
-/* Bylaw Regulations Section */
-.card-regulations {
+    line-height: 1.6;
     margin-bottom: 24px;
+    padding: 18px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
 }
-.card-regulations h5 {
-    font-size: 12px;
+.card-conversation h5 {
+    font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--text-muted);
-    margin-bottom: 8px;
-    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: var(--color-warning);
+    margin-bottom: 10px;
+    font-weight: 800;
 }
-.card-regulations ul {
-    list-style-position: inside;
-    padding-left: 0;
-}
-.card-regulations li {
-    font-size: 14px;
-    color: var(--text-muted);
-    margin-bottom: 6px;
-    line-height: 1.5;
+.card-conversation p {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: var(--text-main);
 }
 
 /* Card Reference links */
@@ -670,9 +670,9 @@ body::after {
 .opt-keep-strong .feedback-btn-fill { background-color: hsla(var(--hue-keep), 70%, 45%, 0.25); }
 .opt-keep-weak .feedback-btn-fill { background-color: hsla(var(--hue-keep), 70%, 45%, 0.15); }
 .opt-scrap-strong .feedback-btn-fill { background-color: hsla(var(--hue-scrap), 75%, 50%, 0.25); }
-.opt-scrap-weak .feedback-btn-fill { background-color: hsla(var(--hue-scrap), 75%, 50%, 0.15); }
+.opt-scrap-weak .feedback-btn-fill { background-color: hsla(var(--hue-warning), 90%, 50%, 0.15); }
 .opt-neutral .feedback-btn-fill { background-color: hsla(var(--hue-warning), 90%, 50%, 0.15); }
-.opt-info .feedback-btn-fill { background-color: hsla(var(--hue-info), 75%, 45%, 0.15); }
+.opt-info .feedback-btn-fill { background-color: rgba(255, 255, 255, 0.04); }
 .opt-skip .feedback-btn-fill { background-color: rgba(255, 255, 255, 0.04); }
 
 /* Selected Option Highlight State */
@@ -684,13 +684,16 @@ body::after {
     border-color: var(--color-keep);
     box-shadow: 0 0 12px hsla(var(--hue-keep), 70%, 45%, 0.2);
 }
-.feedback-btn.answered-user-choice.opt-scrap-strong,
-.feedback-btn.answered-user-choice.opt-scrap-weak {
+.feedback-btn.answered-user-choice.opt-scrap-strong {
     border-color: var(--color-scrap);
     box-shadow: 0 0 12px hsla(var(--hue-scrap), 75%, 50%, 0.2);
 }
+.feedback-btn.answered-user-choice.opt-scrap-weak {
+    border-color: var(--color-warning);
+    box-shadow: 0 0 12px hsla(var(--hue-warning), 90%, 50%, 0.2);
+}
 .feedback-btn.answered-user-choice.opt-neutral { border-color: var(--color-warning); box-shadow: 0 0 12px hsla(var(--hue-warning), 90%, 50%, 0.2); }
-.feedback-btn.answered-user-choice.opt-info { border-color: var(--color-info); }
+.feedback-btn.answered-user-choice.opt-info { border-color: var(--text-dark); }
 .feedback-btn.answered-user-choice.opt-skip { border-color: var(--text-dark); }
 
 /* Global Answered Layout State Adjustments */
@@ -922,7 +925,7 @@ body::after {
 .user-vote-keep { background-color: hsla(var(--hue-keep), 70%, 45%, 0.15); color: var(--color-keep); }
 .user-vote-scrap { background-color: hsla(var(--hue-scrap), 75%, 50%, 0.15); color: var(--color-scrap); }
 .user-vote-neutral { background-color: hsla(var(--hue-warning), 90%, 50%, 0.15); color: var(--color-warning); }
-.user-vote-info { background-color: hsla(var(--hue-info), 75%, 45%, 0.15); color: var(--color-info); }
+.user-vote-info { background-color: rgba(255, 255, 255, 0.02); color: var(--text-dark); }
 .user-vote-skip { background-color: rgba(255, 255, 255, 0.02); color: var(--text-dark); }
 
 /* Mini Consensus Comparison Bar */
@@ -951,7 +954,7 @@ body::after {
 .comp-fill-keep { background-color: var(--color-keep); }
 .comp-fill-scrap { background-color: var(--color-scrap); }
 .comp-fill-neutral { background-color: var(--color-warning); }
-.comp-fill-info { background-color: var(--color-info); }
+.comp-fill-info { background-color: rgba(255, 255, 255, 0.05); }
 .comp-fill-skip { background-color: rgba(255, 255, 255, 0.05); }
 
 /* Results Actions buttons */
